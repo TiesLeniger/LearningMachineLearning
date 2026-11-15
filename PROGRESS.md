@@ -2,11 +2,13 @@
 
 ## Current
 - Phase: 0 (Setup)
-- Next step: 0.2 Git + GitHub repo, commit conventions
+- Next step: 0.4 Tool check (XFOIL, AVL, OpenMDAO, Gymnasium)
 
 ## Log
 - 2026-11-15: Project scoped. CLAUDE.md, README, topic map created.
 - 2026-11-15: 0.1 done. uv-managed env, Python 3.12.16, torch 2.15.0+cpu, numpy 2.5.4, scipy 1.18.1, matplotlib 3.11.2, pytest 9.2.0. Smoke tests pass (6/6). See `phase0_setup/01_environment/`.
+- 2026-11-15: 0.2 done (PR #1). Repo public, topics set. .gitattributes (LF), Conventional Commits + branch/PR/squash workflow in CLAUDE.md, GitHub Actions pytest CI. MIT LICENSE added.
+- 2026-11-15: 0.3 done. Workflow set by CLAUDE.md, PROGRESS.md and the PR review loop; first real review at 1.2.
 
 ## Open questions
 - Which backbone book for Phase 1? Decide at 1.0.
