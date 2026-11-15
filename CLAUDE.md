@@ -34,6 +34,13 @@ Standing instructions for Claude Code in this repo. Read this and PROGRESS.md at
 - Stack: PyTorch, NumPy/SciPy, Gymnasium, JSBSim, OpenMDAO, XFOIL/AVL, pytest.
 - Every exercise has pytest tests. Fix random seeds. Save plots to files.
 - Layout: `phaseN_<name>/<NN_exercise>/` with code, tests and a README (what, why, result).
+- Environment: `uv` (`pyproject.toml` + `uv.lock`), Python 3.12. Test file names unique repo-wide.
+
+## Git workflow
+- One branch per step: `<step>-<short-name>` (e.g. `1.2-linear-regression`).
+- Commits: Conventional Commits with the step as scope: `feat(1.2): closed-form least squares`. Types: feat, fix, test, docs, refactor, ci, chore.
+- Open a PR to `main`; CI (pytest) must pass; Claude reviews the PR; Ties squash-merges.
+- PR title follows the commit convention (it becomes the squash commit message).
 
 ## Session routine
 1. Read PROGRESS.md; summarize where we are in 2-3 bullets.
