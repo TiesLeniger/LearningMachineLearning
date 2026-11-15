@@ -9,6 +9,8 @@ dependencies = [
     "scipy>=1.14",
     "matplotlib>=3.9",
     "torch>=2.5",
+    "openmdao>=3.45.2",
+    "gymnasium>=1.4.0",
 ]
 
 [dependency-groups]

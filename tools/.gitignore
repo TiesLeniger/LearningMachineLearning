@@ -1,0 +1,4 @@
+# Third-party binaries stay local (GPL, platform-specific, git handles binaries badly).
+*
+!.gitignore
+!README.md
