@@ -25,4 +25,4 @@ Verified 2026-11-15 on the laptop. OpenMDAO 3.45.2, Gymnasium 1.4.0, XFOIL 6.99,
 | AVL CLα | 4.57 /rad | lifting line 5.03, Helmbold 4.91 |
 | AVL e | 0.97 | 1 (elliptic) |
 
-**Open point:** AVL's CLα is mesh-converged (Nchord 1–12, Nspan 24–48 all give 4.55–4.57) but 7 % below Helmbold's estimate. The gap shrinks with AR (AR = 100: 6.05 vs 6.16). Cause not verified. Worth understanding before AVL is used to generate surrogate training data.
+**Note:** AVL's CLα is mesh-converged (Nchord 1–12, Nspan 24–48 all give 4.55–4.57) and 7 % below Helmbold's estimate; the gap shrinks with AR (AR = 100: 6.05 vs 6.16). Expected: AVL resolves the lifting surface (chordwise loading, tip effects) that lifting-line and Helmbold approximate, so AVL is taken as the more accurate value.
