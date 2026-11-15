@@ -11,5 +11,7 @@ data/raw/
 runs/
 *.pt
 *.ckpt
-.vscode/
+.vscode/*
+!.vscode/settings.json
+!.vscode/notes.code-snippets
 .idea/
