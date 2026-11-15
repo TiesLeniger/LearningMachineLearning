@@ -9,19 +9,19 @@ Each item: theory (book) -> exercise (you code) -> tests. Portfolio projects are
 - 0.4 Tool check: XFOIL, AVL, OpenMDAO, Gymnasium installed and smoke-tested
 
 ## Phase 1: ML fundamentals
-Backbone: Bishop & Bishop (B&B), *Deep Learning: Foundations and Concepts*, 2024 (free online: https://www.bishopbook.com). GPs: Rasmussen & Williams (R&W), *Gaussian Processes for Machine Learning*, 2006 (http://gaussianprocess.org/gpml/). Section numbers: verify against the book.
+Readings per step: `notes/reading-map.md`.
 
 - 1.0 Choose a backbone book; set up the notes format
-- 1.1 Learning framework: supervised learning, loss, risk, generalization — *Read: B&B ch. 1, 2*
-- 1.2 Linear regression: least squares, MLE view, basis functions. *Exercise: NumPy, closed form + gradient descent* — *Read: B&B 4.1*
-- 1.3 Regularization and the bias-variance trade-off, MAP view (ridge = Gaussian prior). *Exercise: polynomial fit on noisy airfoil polar data* — *Read: B&B 4.1–4.3, 9.1–9.2*
-- 1.4 Model selection: train/val/test, k-fold cross-validation — *Read: B&B 1.2*
-- 1.5 Classification: logistic regression, cross-entropy. *Exercise: stall / no-stall classifier* — *Read: B&B ch. 5*
-- 1.6 Optimization: SGD, momentum, Adam, learning-rate schedules — *Read: B&B ch. 7*
-- 1.7 Neural networks: MLP, backpropagation by hand. *Exercise: NumPy MLP with own backprop, gradient check* — *Read: B&B ch. 6, 8*
-- 1.8 PyTorch: tensors, autograd, nn.Module, training loop. *Exercise: port the 1.7 MLP* — *Read: PyTorch docs/tutorials*
-- 1.9 Practicalities: normalization, initialization, overfitting diagnostics, early stopping — *Read: B&B 7.4, ch. 9*
-- 1.10 Gaussian processes: kernels, posterior, marginal likelihood, hyperparameters. *Exercise: GP from scratch in NumPy* — *Read: R&W ch. 2, 5*
+- 1.1 Learning framework: supervised learning, loss, risk, generalization
+- 1.2 Linear regression: least squares, MLE view, basis functions. *Exercise: NumPy, closed form + gradient descent*
+- 1.3 Regularization and the bias-variance trade-off, MAP view (ridge = Gaussian prior). *Exercise: polynomial fit on noisy airfoil polar data*
+- 1.4 Model selection: train/val/test, k-fold cross-validation
+- 1.5 Classification: logistic regression, cross-entropy. *Exercise: stall / no-stall classifier*
+- 1.6 Optimization: SGD, momentum, Adam, learning-rate schedules
+- 1.7 Neural networks: MLP, backpropagation by hand. *Exercise: NumPy MLP with own backprop, gradient check*
+- 1.8 PyTorch: tensors, autograd, nn.Module, training loop. *Exercise: port the 1.7 MLP*
+- 1.9 Practicalities: normalization, initialization, overfitting diagnostics, early stopping
+- 1.10 Gaussian processes: kernels, posterior, marginal likelihood, hyperparameters. *Exercise: GP from scratch in NumPy*
 
 ## Phase 2: Surrogates & MDAO [P]
 - 2.1 Design of experiments: Latin hypercube, Sobol sequences

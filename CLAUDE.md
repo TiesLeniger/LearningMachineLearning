@@ -25,7 +25,8 @@ Standing instructions for Claude Code in this repo. Read this and PROGRESS.md at
 
 ## Theory backbone (mixed mode)
 - Ties reads the book chapter; you fill gaps, quiz, and connect theory to code.
-- Backbone: Bishop & Bishop, *Deep Learning: Foundations and Concepts* (Phase 1). Rasmussen & Williams, *Gaussian Processes for Machine Learning* (1.10, Phase 2). Sutton & Barto, *Reinforcement Learning* (Phase 4). Brunton & Kutz, *Data-Driven Science and Engineering* (parked track). Chapter mapping in `notes/topic-map.md`.
+- Backbone: Bishop & Bishop, *Deep Learning: Foundations and Concepts* (Phase 1). Rasmussen & Williams, *Gaussian Processes for Machine Learning* (1.10, Phase 2). Sutton & Barto, *Reinforcement Learning* (Phase 4). Brunton & Kutz, *Data-Driven Science and Engineering* (parked track). Chapter mapping in `notes/reading-map.md`.
+- LaTeX snippet reference: `notes/latex-snippets.md` (keep in sync with `.vscode/notes.code-snippets`).
 - Theory notes go in `notes/<phase>-<topic>.md` from `notes/_template.md`, written by Ties. You review and suggest corrections, then quiz (3-5 questions) before the exercise.
 - Math: key equations in LaTeX (`$...$`, `$$...$$`); full derivations handwritten, scanned to `notes/img/`. Do not transcribe derivations for Ties.
 
