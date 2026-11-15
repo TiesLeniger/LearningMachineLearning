@@ -1,0 +1,7 @@
+{
+  // Expand snippets with Tab in Markdown without suggestion popups while writing prose.
+  "[markdown]": {
+    "editor.tabCompletion": "onlySnippets",
+    "editor.quickSuggestions": { "other": "off", "comments": "off", "strings": "off" }
+  }
+}
