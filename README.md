@@ -1,5 +1,7 @@
 # Machine Learning for Aerospace
 
+[![tests](https://github.com/TiesLeniger/LearningMachineLearning/actions/workflows/tests.yml/badge.svg)](https://github.com/TiesLeniger/LearningMachineLearning/actions/workflows/tests.yml)
+
 Self-study project: ML fundamentals applied to aerospace simulation.
 
 ## Tracks
