@@ -2,7 +2,7 @@
 
 ## Current
 - Phase: 1 (ML fundamentals)
-- Next step: 1.1 Learning framework (read B&B ch. 1-2, write `notes/phase1-learning-framework.md`)
+- Next step: 1.2 Linear regression (read B&B §4.1; quiz; exercise: closed-form least squares, MLE noise variance)
 
 ## Log
 - 2026-11-15: Project scoped. CLAUDE.md, README, topic map created.
@@ -12,8 +12,11 @@
 - 2026-11-15: 0.4 done (PR #3). OpenMDAO 3.45.2, Gymnasium 1.4.0, XFOIL 6.99, AVL 3.40 in `tools/` (gitignored). 12 smoke tests pass locally; CI skips XFOIL/AVL. Phase 0 complete.
 - 2026-11-15: AVL CLa point closed: AVL (4.57 /rad, mesh-converged) is a higher-resolution lifting-surface result than lifting-line/Helmbold estimates (4.91-5.03); the difference is expected.
 - 2026-11-15: 1.0 done. Backbone: Bishop & Bishop (R&W for GPs). Chapter mapping in topic map. Notes template, `notes/img/` for scanned derivations, VS Code LaTeX snippets (Tab to expand in Markdown).
+- 2026-11-21: Workflow change: quiz questions one at a time; Claude writes the theory note after the quiz (CLAUDE.md).
+- 2026-11-21: 1.1 done. B&B ch. 1-2 read, two quiz rounds plus a Q4 re-quiz. Weak spots (now fixed): ML variance bias, lambda -> inf limit, change of variables (Jacobian direction, mode not invariant), why predictive uncertainty matters for surrogates. Note: `notes/phase1-learning-framework.md`. Reading-map row 1.1 verified.
 
 ## Open questions
+- Decision theory (optimal predictor under squared loss = E[t|x]): B&B §4.2, quiz at 1.2/1.3.
 - Verify B&B section numbers in the topic map against the book (mapping written from memory).
 - Does current PyTorch (CUDA build) still support the GTX 1060 (Pascal)? Check before using the tower.
 - JSBSim on native Windows or WSL2? Check at 4.5.
