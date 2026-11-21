@@ -10,7 +10,7 @@ Section numbers were written from memory: tick **Verified** once checked against
 |Step|Topic|Reading|Verified|
 |-|-|-|-|
 |1.1|Learning framework: supervised learning, loss, risk, generalization|B\&B ch. 1; ch. 2 (probability refresher)|☑|
-|1.2|Linear regression: least squares, MLE, basis functions|B\&B §4.1|☐|
+|1.2|Linear regression: least squares, MLE, basis functions|B\&B §4.1|☑|
 |1.3|Regularization, bias-variance, MAP|B\&B §4.1–4.3, §9.1–9.2|☐|
 |1.4|Model selection, cross-validation|B\&B §1.2|☐|
 |1.5|Classification: logistic regression, cross-entropy|B\&B ch. 5|☐|
