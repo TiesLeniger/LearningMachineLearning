@@ -20,7 +20,12 @@ def poly_features(x: np.ndarray, M: int) -> np.ndarray:
     Returns:
         Phi: (N, M), column j = x**j for j = 0..M-1.
     """
-    raise NotImplementedError
+    N = x.shape[0]
+    Phi = np.ones((N,M), dtype=float)
+    for i in range(1, M):
+        Phi[:, i] = x**i
+
+    return Phi
 
 
 def fit_ml(Phi: np.ndarray, t: np.ndarray) -> np.ndarray:
@@ -35,7 +40,9 @@ def fit_ml(Phi: np.ndarray, t: np.ndarray) -> np.ndarray:
     Returns:
         w: (M,) weights minimising 0.5 * ||t - Phi w||^2.
     """
-    raise NotImplementedError
+    w = np.linalg.lstsq(Phi, t)[0]
+
+    return w
 
 
 def fit_ridge(Phi: np.ndarray, t: np.ndarray, lam: float) -> np.ndarray:
@@ -49,7 +56,12 @@ def fit_ridge(Phi: np.ndarray, t: np.ndarray, lam: float) -> np.ndarray:
     Returns:
         w: (M,) weights minimising 0.5 * ||t - Phi w||^2 + 0.5 * lam * ||w||^2.
     """
-    raise NotImplementedError
+    M = Phi.shape[1]
+    A = lam * np.eye(M) + Phi.T @ Phi
+    b = Phi.T @ t
+    w = np.linalg.solve(A, b)
+
+    return w
 
 
 def noise_var(Phi: np.ndarray, t: np.ndarray, w: np.ndarray) -> float:
@@ -63,7 +75,7 @@ def noise_var(Phi: np.ndarray, t: np.ndarray, w: np.ndarray) -> float:
     Returns:
         Mean squared residual (scalar).
     """
-    raise NotImplementedError
+    return np.mean((Phi @ w - t)**2)
 
 
 def rms(Phi: np.ndarray, t: np.ndarray, w: np.ndarray) -> float:
@@ -77,7 +89,7 @@ def rms(Phi: np.ndarray, t: np.ndarray, w: np.ndarray) -> float:
     Returns:
         E_RMS (scalar).
     """
-    raise NotImplementedError
+    return np.sqrt(noise_var(Phi, t, w))
 
 
 def fit_lms(
@@ -102,4 +114,12 @@ def fit_lms(
     Returns:
         w: (M,) weights after training. May contain inf/nan if lr is too large.
     """
-    raise NotImplementedError
+    N, M = Phi.shape
+    w = np.zeros(M)
+
+    for _ in range(n_epochs):
+        for idx in rng.permutation(N):
+            w = w + lr * (t[idx] - w @ Phi[idx, :]) * Phi[idx, :]
+
+
+    return w

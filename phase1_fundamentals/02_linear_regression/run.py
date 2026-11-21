@@ -75,14 +75,28 @@ def main():
     x_train, t_train = make_sine_data(N_TRAIN, NOISE_STD, rng)
     x_test, t_test = make_sine_data(N_TEST, NOISE_STD, rng)
 
-    # TODO(Ties):
-    # 1. For each M in M_PLOT: fit with fit_ml, evaluate the fit on a dense grid
-    #    x_grid = np.linspace(0, 1, 200), collect into fits = {M: (x_grid, y_grid)}.
-    # 2. For each M in M_RANGE: fit on the training set, compute train and test E_RMS.
-    # 3. Call plot_fits(...) and plot_rms(...) with RESULTS / "fits.png" and
-    #    RESULTS / "rms_vs_M.png"; print a small table of M, train RMS, test RMS.
-    raise NotImplementedError
+    x_grid = np.linspace(0, 1, 200)
+    fits = {}
+    for M in M_PLOT:
+        Phi_train = poly_features(x_train, M)
+        w = fit_ml(Phi_train, t_train)
+        Phi_grid = poly_features(x_grid, M)
+        y_grid = Phi_grid @ w
+        fits[M] = (x_grid, y_grid)
 
+    rms_train = []
+    rms_test = []
+    for M in M_RANGE:
+        Phi_train = poly_features(x_train, M)
+        w = fit_ml(Phi_train, t_train)
+        rms_train.append(rms(Phi_train, t_train, w))
+        Phi_test = poly_features(x_test, M)
+        rms_test.append(rms(Phi_test, t_test, w))
+        print(f"M: {M} | rms_train: {rms_train[-1]:.4f} | rms_test: {rms_test[-1]:.4f} | |w|: {np.linalg.norm(w):.3e}")
+
+    plot_fits(x_train, t_train, fits, RESULTS / "fits.png")
+    plot_rms(M_RANGE, rms_train, rms_test, RESULTS / "rms_vs_M.png")
+    
 
 if __name__ == "__main__":
     main()
