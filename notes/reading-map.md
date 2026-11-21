@@ -9,7 +9,7 @@ Section numbers were written from memory: tick **Verified** once checked against
 
 |Step|Topic|Reading|Verified|
 |-|-|-|-|
-|1.1|Learning framework: supervised learning, loss, risk, generalization|B\&B ch. 1; ch. 2 (probability refresher)|check|
+|1.1|Learning framework: supervised learning, loss, risk, generalization|B\&B ch. 1; ch. 2 (probability refresher)|☑|
 |1.2|Linear regression: least squares, MLE, basis functions|B\&B §4.1|☐|
 |1.3|Regularization, bias-variance, MAP|B\&B §4.1–4.3, §9.1–9.2|☐|
 |1.4|Model selection, cross-validation|B\&B §1.2|☐|
@@ -19,6 +19,3 @@ Section numbers were written from memory: tick **Verified** once checked against
 |1.8|PyTorch|PyTorch docs: https://pytorch.org/tutorials/beginner/basics/intro.html|—|
 |1.9|Practicalities: normalization, initialization, early stopping|B\&B §7.4, ch. 9|☐|
 |1.10|Gaussian processes|R\&W ch. 2, ch. 5|☐|
-
-
-
