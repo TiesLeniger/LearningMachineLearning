@@ -2,7 +2,7 @@
 
 ## Current
 - Phase: 1 (ML fundamentals)
-- Next step: 1.2 Linear regression (read B&B §4.1; quiz; exercise: closed-form least squares, MLE noise variance)
+- Next step: 1.3 Regularization, bias-variance, MAP (read B&B §4.1–4.3, §9.1–9.2)
 
 ## Log
 - 2026-11-15: Project scoped. CLAUDE.md, README, topic map created.
@@ -14,9 +14,11 @@
 - 2026-11-15: 1.0 done. Backbone: Bishop & Bishop (R&W for GPs). Chapter mapping in topic map. Notes template, `notes/img/` for scanned derivations, VS Code LaTeX snippets (Tab to expand in Markdown).
 - 2026-11-21: Workflow change: quiz questions one at a time; Claude writes the theory note after the quiz (CLAUDE.md).
 - 2026-11-21: 1.1 done. B&B ch. 1-2 read, two quiz rounds plus a Q4 re-quiz. Weak spots (now fixed): ML variance bias, lambda -> inf limit, change of variables (Jacobian direction, mode not invariant), why predictive uncertainty matters for surrogates. Note: `notes/phase1-learning-framework.md`. Reading-map row 1.1 verified.
+- 2026-11-21: 1.2 done. Quiz on B&B §4.1 passed (weak: orthogonal residual, bias/centroid link, LMS sign and divergence). `phase1_fundamentals/02_linear_regression/`: poly features, ML via lstsq, ridge via solve, noise variance, RMS, LMS; 14 tests pass. Overfitting reproduced: best test RMS ≈ 0.43 at M = 4–7, M = 10 interpolates (test RMS 8.1, ‖w‖ ≈ 6e6). Workflow: Claude writes exercise READMEs; TODOs concrete.
 
 ## Open questions
-- Decision theory (optimal predictor under squared loss = E[t|x]): B&B §4.2, quiz at 1.2/1.3.
+- Decision theory (optimal predictor under squared loss = E[t|x]): B&B §4.2, quiz at 1.3.
+- Why best test RMS (≈ 0.43) sits above noise σ = 0.3 at N = 10: bias-variance, answer at 1.3.
 - Verify B&B section numbers in the topic map against the book (mapping written from memory).
 - Does current PyTorch (CUDA build) still support the GTX 1060 (Pascal)? Check before using the tower.
 - JSBSim on native Windows or WSL2? Check at 4.5.
